@@ -3,7 +3,12 @@
 	<ConfigVersions>
 		<Metadata name="Catalog.инт_РазделНастроек" id="9f143f61-8d35-4e0c-986f-9c5e64bab035" configVersion="4b03af030a38cdb54ac9233f6ef58876baa144c1"/>
 		<Metadata name="Catalog.инт_РазделНастроек.ObjectModule" id="9f143f61-8d35-4e0c-986f-9c5e64bab035.0" configVersion="e725a33421f176060aa4d28849165fb7a536bb86"/>
-		<Metadata name="Configuration.Интант_1" id="835366a0-1be9-46ad-b925-efd750246b41" configVersion="4345b32adea868383e67d71a8c305bf7e8ef831e"/>
+		<Metadata name="Configuration.Интант_1" id="835366a0-1be9-46ad-b925-efd750246b41" configVersion="4e464250cd24e7363f016bb29edf54606b698fd0"/>
+		<Metadata name="DataProcessor.инт_РедакторНастройкиСистемы" id="74ff1446-4e4c-4cb6-9643-a42a8a8018e7" configVersion="11208ced8f95c938effc4e1e4bd3793172169362">
+			<Metadata name="DataProcessor.инт_РедакторНастройкиСистемы.Attribute.инт_РазделНастроек" id="cf383f0a-656c-4a05-9bef-32c7223d4c22"/>
+		</Metadata>
+		<Metadata name="DataProcessor.инт_РедакторНастройкиСистемы.Form.Форма" id="1c461f6c-7500-487b-86e1-6d237e3111c7" configVersion="86196ac85821b174b31be4b8043191ad4c47ef37"/>
+		<Metadata name="DataProcessor.инт_РедакторНастройкиСистемы.Form.Форма.Form" id="1c461f6c-7500-487b-86e1-6d237e3111c7.0" configVersion="d695bf514af522a7bdb8851bcb123194091e8071"/>
 		<Metadata name="InformationRegister.инт_НастройкиСистемы" id="501a61a5-4d38-4bce-8d26-4682b21f46eb" configVersion="7a2af088a2aeb464dafacd006e373e855d75a1a3">
 			<Metadata name="InformationRegister.инт_НастройкиСистемы.Dimension.РазделНастроек" id="5d1452e6-263e-4ef2-94b3-44a54474090a"/>
 			<Metadata name="InformationRegister.инт_НастройкиСистемы.Resource.ЗначениеСтрокаНеограниченная" id="8ff97979-ed4f-4e20-a8a6-50a3155f2dea"/>
