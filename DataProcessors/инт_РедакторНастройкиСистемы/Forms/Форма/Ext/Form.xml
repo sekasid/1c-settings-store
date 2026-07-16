@@ -1,6 +1,31 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="Далее" id="100">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Далее</CommandName>
+				<ExtendedTooltip name="ДалееРасширеннаяПодсказка" id="101"/>
+			</Button>
+			<Button name="Назад" id="102">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Назад</CommandName>
+				<ExtendedTooltip name="НазадРасширеннаяПодсказка" id="103"/>
+			</Button>
+			<Button name="Сохранить" id="104">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Сохранить</CommandName>
+				<ExtendedTooltip name="СохранитьРасширеннаяПодсказка" id="105"/>
+			</Button>
+			<Button name="СправкаПоФорме" id="130">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СправкаПоФорме</CommandName>
+				<ExtendedTooltip name="СправкаПоФормеРасширеннаяПодсказка" id="131"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
@@ -12,80 +37,96 @@
 					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Страницы</v8:content>
-				</v8:item>
-			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
 			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="5"/>
 			<ChildItems>
 				<Page name="НачальнаяСтраница" id="6">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Начало настройки</v8:content>
+							<v8:content>Начало</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Начальная страница</v8:content>
-						</v8:item>
-					</ToolTip>
 					<ExtendedTooltip name="НачальнаяСтраницаРасширеннаяПодсказка" id="7"/>
 					<ChildItems>
-						<UsualGroup name="Группа1" id="16">
-							<Group>Vertical</Group>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="17"/>
-							<ChildItems>
-								<CheckBoxField name="СоздатьНастройку" id="8">
-									<DataPath>СоздатьНастройку</DataPath>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="СоздатьНастройкуКонтекстноеМеню" id="9"/>
-									<ExtendedTooltip name="СоздатьНастройкуРасширеннаяПодсказка" id="10"/>
-									<Events>
-										<Event name="OnChange">СоздатьНастройкуПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
-								<CheckBoxField name="ИзменитьНастройку" id="11">
-									<DataPath>ИзменитьНастройку</DataPath>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ИзменитьНастройкуКонтекстноеМеню" id="12"/>
-									<ExtendedTooltip name="ИзменитьНастройкуРасширеннаяПодсказка" id="13"/>
-									<Events>
-										<Event name="OnChange">ИзменитьНастройкуПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
-							</ChildItems>
-						</UsualGroup>
-						<Button name="Далее" id="14">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.Далее</CommandName>
-							<ExtendedTooltip name="ДалееРасширеннаяПодсказка" id="15"/>
-						</Button>
+						<LabelDecoration name="ПодсказкаНачальнойСтраницы" id="132">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выберите действие и нажмите «Далее».
+«Создать» — новая запись настройки по выбранному разделу.
+«Изменить» — выбрать существующий раздел и отредактировать значение.
+Подробная справка — кнопка «Справка» в командной панели формы.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПодсказкаНачальнойСтраницыКонтекстноеМеню" id="133"/>
+							<ExtendedTooltip name="ПодсказкаНачальнойСтраницыРасширеннаяПодсказка" id="134"/>
+						</LabelDecoration>
+						<RadioButtonField name="РежимРаботы" id="8">
+							<DataPath>РежимРаботы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Что нужно сделать</v8:content>
+								</v8:item>
+							</Title>
+							<RadioButtonType>RadioButtons</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать настройку</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Создать</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить настройку</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Изменить</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="РежимРаботыКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="РежимРаботыРасширеннаяПодсказка" id="10"/>
+						</RadioButtonField>
 					</ChildItems>
 				</Page>
-				<Page name="СтраницаСозданияНастройки" id="18">
+				<Page name="СтраницаДанныхНастройки" id="18">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Создание настройки</v8:content>
+							<v8:content>Данные настройки</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница создания настройки</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="СтраницаСозданияНастройкиРасширеннаяПодсказка" id="19"/>
+					<ExtendedTooltip name="СтраницаДанныхНастройкиРасширеннаяПодсказка" id="19"/>
 					<ChildItems>
+						<InputField name="инт_РазделНастроек" id="28">
+							<DataPath>Объект.инт_РазделНастроек</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="инт_РазделНастроекКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="инт_РазделНастроекРасширеннаяПодсказка" id="30"/>
+							<Events>
+								<Event name="OnChange">инт_РазделНастроекПриИзменении</Event>
+							</Events>
+						</InputField>
 						<InputField name="ТипНастройки" id="23">
 							<DataPath>ТипНастройки</DataPath>
 							<ListChoiceMode>true</ListChoiceMode>
-							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 							<ChooseType>false</ChooseType>
 							<TextEdit>false</TextEdit>
 							<ChoiceList>
@@ -100,6 +141,19 @@
 											</v8:item>
 										</Presentation>
 										<Value xsi:type="xs:string">Строка</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Длинная строка</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ДлиннаяСтрока</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -148,116 +202,553 @@
 										<Presentation>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>ХранилищеНастроек</v8:content>
+												<v8:content>Хранилище значений</v8:content>
 											</v8:item>
 										</Presentation>
-										<Value xsi:type="xs:string">ХранилищеНастроек</Value>
+										<Value xsi:type="xs:string">Хранилище</Value>
 									</xr:Value>
 								</xr:Item>
 							</ChoiceList>
 							<ContextMenu name="ТипНастройкиКонтекстноеМеню" id="24"/>
 							<ExtendedTooltip name="ТипНастройкиРасширеннаяПодсказка" id="25"/>
+							<Events>
+								<Event name="OnChange">ТипНастройкиПриИзменении</Event>
+							</Events>
 						</InputField>
-					</ChildItems>
-				</Page>
-				<Page name="СтраницаРедактированияНастройки" id="26">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Редактировать настройку</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница редактирования настройки</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="СтраницаРедактированияНастройкиРасширеннаяПодсказка" id="27"/>
-					<ChildItems>
-						<InputField name="инт_РазделНастроек" id="28">
-							<DataPath>Объект.инт_РазделНастроек</DataPath>
-							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-							<ContextMenu name="инт_РазделНастроекКонтекстноеМеню" id="29"/>
-							<ExtendedTooltip name="инт_РазделНастроекРасширеннаяПодсказка" id="30"/>
-						</InputField>
-						<InputField name="ТипНастройки1" id="31">
-							<DataPath>ТипНастройки</DataPath>
-							<ListChoiceMode>true</ListChoiceMode>
-							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-							<ChooseType>false</ChooseType>
-							<TextEdit>false</TextEdit>
-							<ChoiceList>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Строка</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">Строка</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Булево</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">Булево</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Дата</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">Дата</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Число</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">Число</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>ХранилищеНастроек</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">ХранилищеНастроек</Value>
-									</xr:Value>
-								</xr:Item>
-							</ChoiceList>
-							<ContextMenu name="ТипНастройки1КонтекстноеМеню" id="32"/>
-							<ExtendedTooltip name="ТипНастройки1РасширеннаяПодсказка" id="33"/>
-						</InputField>
+						<UsualGroup name="ГруппаЗначениеЧисло" id="40">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Значение (число)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗначениеЧислоРасширеннаяПодсказка" id="41"/>
+							<ChildItems>
+								<InputField name="ЗначениеЧисло" id="42">
+									<DataPath>ЗначениеЧисло</DataPath>
+									<ContextMenu name="ЗначениеЧислоКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ЗначениеЧислоРасширеннаяПодсказка" id="44"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЗначениеБулево" id="45">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Значение (булево)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗначениеБулевоРасширеннаяПодсказка" id="46"/>
+							<ChildItems>
+								<CheckBoxField name="ЗначениеБулево" id="47">
+									<DataPath>ЗначениеБулево</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗначениеБулевоКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ЗначениеБулевоРасширеннаяПодсказка" id="49"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЗначениеДата" id="50">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Значение (дата)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗначениеДатаРасширеннаяПодсказка" id="51"/>
+							<ChildItems>
+								<InputField name="ЗначениеДата" id="52">
+									<DataPath>ЗначениеДата</DataPath>
+									<ContextMenu name="ЗначениеДатаКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ЗначениеДатаРасширеннаяПодсказка" id="54"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЗначениеСтрока" id="55">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Значение (строка)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗначениеСтрокаРасширеннаяПодсказка" id="56"/>
+							<ChildItems>
+								<InputField name="ЗначениеСтрока" id="57">
+									<DataPath>ЗначениеСтрока</DataPath>
+									<ContextMenu name="ЗначениеСтрокаКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ЗначениеСтрокаРасширеннаяПодсказка" id="59"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЗначениеДлиннаяСтрока" id="60">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Значение (длинная строка)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗначениеДлиннаяСтрокаРасширеннаяПодсказка" id="61"/>
+							<ChildItems>
+								<InputField name="ЗначениеДлиннаяСтрока" id="62">
+									<DataPath>ЗначениеДлиннаяСтрока</DataPath>
+									<MultiLine>true</MultiLine>
+									<ExtendedEdit>true</ExtendedEdit>
+									<Height>5</Height>
+									<ContextMenu name="ЗначениеДлиннаяСтрокаКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ЗначениеДлиннаяСтрокаРасширеннаяПодсказка" id="64"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаХранилище" id="65">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Хранилище значений</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаХранилищеРасширеннаяПодсказка" id="66"/>
+							<ChildItems>
+								<RadioButtonField name="РежимВводаХранилища" id="67">
+									<DataPath>РежимВводаХранилища</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Способ ввода</v8:content>
+										</v8:item>
+									</Title>
+									<RadioButtonType>RadioButtons</RadioButtonType>
+									<ColumnsCount>2</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Текст</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Текст</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Конструктор</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Конструктор</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="РежимВводаХранилищаКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="РежимВводаХранилищаРасширеннаяПодсказка" id="69"/>
+									<Events>
+										<Event name="OnChange">РежимВводаХранилищаПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<UsualGroup name="ГруппаТекстХранилища" id="70">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Текст хранилища</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТекстХранилищаРасширеннаяПодсказка" id="71"/>
+									<ChildItems>
+										<LabelDecoration name="ПодсказкаФорматаХранилища" id="72">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Формат текста должен быть результатом функции ЗначениеВСтрокуВнутр. Для чтения используется ЗначениеИзСтрокиВнутр. JSON не поддерживается.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПодсказкаФорматаХранилищаКонтекстноеМеню" id="73"/>
+											<ExtendedTooltip name="ПодсказкаФорматаХранилищаРасширеннаяПодсказка" id="74"/>
+										</LabelDecoration>
+										<InputField name="ТекстХранилища" id="75">
+											<DataPath>ТекстХранилища</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Текст (ЗначениеВСтрокуВнутр)</v8:content>
+												</v8:item>
+											</Title>
+											<MultiLine>true</MultiLine>
+											<ExtendedEdit>true</ExtendedEdit>
+											<Height>8</Height>
+											<ContextMenu name="ТекстХранилищаКонтекстноеМеню" id="76"/>
+											<ExtendedTooltip name="ТекстХранилищаРасширеннаяПодсказка" id="77"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКонструкторХранилища" id="78">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Конструктор</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКонструкторХранилищаРасширеннаяПодсказка" id="79"/>
+									<ChildItems>
+										<InputField name="ТипКорняХранилища" id="80">
+											<DataPath>ТипКорняХранилища</DataPath>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Структура</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Структура</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Соответствие</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Соответствие</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Массив</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Массив</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ТипКорняХранилищаКонтекстноеМеню" id="81"/>
+											<ExtendedTooltip name="ТипКорняХранилищаРасширеннаяПодсказка" id="82"/>
+											<Events>
+												<Event name="OnChange">ТипКорняХранилищаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТипЭлементовМассива" id="137">
+											<DataPath>ТипЭлементовМассива</DataPath>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Строка</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Строка</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Число</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Число</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Булево</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Булево</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Дата</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Дата</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Сериализованный текст</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">СериализованныйТекст</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ТипЭлементовМассиваКонтекстноеМеню" id="138"/>
+											<ExtendedTooltip name="ТипЭлементовМассиваРасширеннаяПодсказка" id="139"/>
+											<Events>
+												<Event name="OnChange">ТипЭлементовМассиваПриИзменении</Event>
+											</Events>
+										</InputField>
+										<UsualGroup name="ГруппаСправкаКонструктора" id="135">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Как пользоваться конструктором</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Behavior>Collapsible</Behavior>
+											<Collapsed>false</Collapsed>
+											<Representation>NormalSeparation</Representation>
+											<ExtendedTooltip name="ГруппаСправкаКонструктораРасширеннаяПодсказка" id="136"/>
+											<ChildItems>
+												<LabelDecoration name="ПодсказкаКонструктора" id="83">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>10</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>1. Выберите «Тип корня» — верхний уровень значения:
+   • Структура / Соответствие — плоский набор полей (ключ обязателен);
+   • Массив — список одного простого типа (укажите «Тип элементов массива»).
+
+2. «Добавить» — новая строка (ключ + тип + значение).
+
+3. Тип строки — только простые: Строка, Число, Булево, Дата
+   или «Сериализованный текст». Вложенные структуры не создаются.
+
+4. Колонка «Значение» подстраивает тип ввода под тип строки
+   (календарь для даты, числовое поле для числа и т.д.).
+
+5. ТаблицаЗначений и прочие сложные типы — «Сериализованный текст»
+   (формат ЗначениеВСтрокуВнутр, не JSON).
+
+6. «Удалить» удаляет выбранную строку.
+
+Пример: корень «Структура» → «Добавить» → Ключ=Имя1, Тип=Строка, Значение=Петр.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ПодсказкаКонструктораКонтекстноеМеню" id="84"/>
+													<ExtendedTooltip name="ПодсказкаКонструктораРасширеннаяПодсказка" id="85"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="ЭлементыКонструктора" id="86">
+											<Representation>Tree</Representation>
+											<AutoInsertNewRow>false</AutoInsertNewRow>
+											<EnableStartDrag>false</EnableStartDrag>
+											<EnableDrag>false</EnableDrag>
+											<DataPath>ЭлементыКонструктора</DataPath>
+											<ContextMenu name="ЭлементыКонструктораКонтекстноеМеню" id="87"/>
+											<AutoCommandBar name="ЭлементыКонструктораКоманднаяПанель" id="88">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="ДобавитьЭлементКонструктора" id="106">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ДобавитьЭлементКонструктора</CommandName>
+														<ExtendedTooltip name="ДобавитьЭлементКонструктораРасширеннаяПодсказка" id="107"/>
+													</Button>
+													<Button name="ДобавитьВложенныйЭлементКонструктора" id="108">
+														<Type>CommandBarButton</Type>
+														<Visible>false</Visible>
+														<CommandName>Form.Command.ДобавитьВложенныйЭлементКонструктора</CommandName>
+														<ExtendedTooltip name="ДобавитьВложенныйЭлементКонструктораРасширеннаяПодсказка" id="109"/>
+													</Button>
+													<Button name="УдалитьЭлементКонструктора" id="110">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.УдалитьЭлементКонструктора</CommandName>
+														<ExtendedTooltip name="УдалитьЭлементКонструктораРасширеннаяПодсказка" id="111"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ЭлементыКонструктораРасширеннаяПодсказка" id="89"/>
+											<SearchStringAddition name="ЭлементыКонструктораСтрокаПоиска" id="90">
+												<AdditionSource>
+													<Item>ЭлементыКонструктора</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ЭлементыКонструктораСтрокаПоискаКонтекстноеМеню" id="91"/>
+												<ExtendedTooltip name="ЭлементыКонструктораСтрокаПоискаРасширеннаяПодсказка" id="92"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ЭлементыКонструктораСостояниеПросмотра" id="93">
+												<AdditionSource>
+													<Item>ЭлементыКонструктора</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ЭлементыКонструктораСостояниеПросмотраКонтекстноеМеню" id="94"/>
+												<ExtendedTooltip name="ЭлементыКонструктораСостояниеПросмотраРасширеннаяПодсказка" id="95"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ЭлементыКонструктораУправлениеПоиском" id="96">
+												<AdditionSource>
+													<Item>ЭлементыКонструктора</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ЭлементыКонструктораУправлениеПоискомКонтекстноеМеню" id="97"/>
+												<ExtendedTooltip name="ЭлементыКонструктораУправлениеПоискомРасширеннаяПодсказка" id="98"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="OnActivateRow">ЭлементыКонструктораПриАктивизацииСтроки</Event>
+											</Events>
+											<ChildItems>
+												<InputField name="ЭлементыКонструктораКлюч" id="112">
+													<DataPath>ЭлементыКонструктора.Ключ</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЭлементыКонструктораКлючКонтекстноеМеню" id="113"/>
+													<ExtendedTooltip name="ЭлементыКонструктораКлючРасширеннаяПодсказка" id="114"/>
+												</InputField>
+												<InputField name="ЭлементыКонструктораТипЭлемента" id="115">
+													<DataPath>ЭлементыКонструктора.ТипЭлемента</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChooseType>false</ChooseType>
+													<TextEdit>false</TextEdit>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Строка</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">Строка</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Число</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">Число</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Булево</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">Булево</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Дата</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">Дата</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Сериализованный текст</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">СериализованныйТекст</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ЭлементыКонструктораТипЭлементаКонтекстноеМеню" id="116"/>
+													<ExtendedTooltip name="ЭлементыКонструктораТипЭлементаРасширеннаяПодсказка" id="117"/>
+													<Events>
+														<Event name="OnChange">ЭлементыКонструктораТипЭлементаПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ЭлементыКонструктораЗначениеПредставление" id="118">
+													<DataPath>ЭлементыКонструктора.ЗначениеПредставление</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ChooseType>false</ChooseType>
+													<ContextMenu name="ЭлементыКонструктораЗначениеПредставлениеКонтекстноеМеню" id="119"/>
+													<ExtendedTooltip name="ЭлементыКонструктораЗначениеПредставлениеРасширеннаяПодсказка" id="120"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -280,32 +771,225 @@
 			<Type>
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеЧисло" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеБулево" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеДата" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеСтрока" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеДлиннаяСтрока" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="СоздатьНастройку" id="3">
+		<Attribute name="РежимВводаХранилища" id="10">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Создать настройку</v8:content>
+					<v8:content>Способ ввода</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:boolean</v8:Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ИзменитьНастройку" id="4">
+		<Attribute name="ТекстХранилища" id="11">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Изменить настройку</v8:content>
+					<v8:content>Текст хранилища</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:boolean</v8:Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="ТипКорняХранилища" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип корня</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипЭлементовМассива" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип элементов массива</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭлементыКонструктора" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элементы конструктора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ключ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипЭлемента" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗначениеПредставление" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>5</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -323,6 +1007,96 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Далее</Action>
+		</Command>
+		<Command name="Назад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Назад</Action>
+		</Command>
+		<Command name="Сохранить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сохранить</Action>
+		</Command>
+		<Command name="ДобавитьЭлементКонструктора" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить элемент в корень дерева</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьЭлементКонструктора</Action>
+		</Command>
+		<Command name="ДобавитьВложенныйЭлементКонструктора" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить вложенный</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить внутрь выбранной строки. Доступно, если тип строки — Структура, Соответствие или Массив</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьВложенныйЭлементКонструктора</Action>
+		</Command>
+		<Command name="УдалитьЭлементКонструктора" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить элемент и вложенные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьЭлементКонструктора</Action>
+		</Command>
+		<Command name="СправкаПоФорме" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка по работе с формой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СправкаПоФорме</Action>
 		</Command>
 	</Commands>
 </Form>

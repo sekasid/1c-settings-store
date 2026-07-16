@@ -15,6 +15,8 @@
 			<Metadata name="InformationRegister.инт_НастройкиСистемы.Resource.ЗначениеХранилище" id="f8f4388d-1522-49fb-bb9b-b73f65bfc7bc"/>
 			<Metadata name="InformationRegister.инт_НастройкиСистемы.Resource.Значение" id="feab2587-aa59-4e8c-bf04-edd301ec3053"/>
 		</Metadata>
+		<Metadata name="InformationRegister.инт_НастройкиСистемы.Form.ФормаСписка" id="3bfa73f5-1327-41b6-b8b3-b63ca9f1c5bd" configVersion="2cf12a4f73ab4c28bb15c9570218dceb00000000"/>
+		<Metadata name="InformationRegister.инт_НастройкиСистемы.Form.ФормаСписка.Form" id="3bfa73f5-1327-41b6-b8b3-b63ca9f1c5bd.0" configVersion="4f9c563488a645608d4a19327482777000000000"/>
 		<Metadata name="InformationRegister.инт_НастройкиСистемы.Form.ФормаЗаписи" id="2365ec6e-aa7c-4076-a59b-c22bd3151d7d" configVersion="30753a4668dca7642b9f6053f6162e2ec011aefd"/>
 		<Metadata name="InformationRegister.инт_НастройкиСистемы.Form.ФормаЗаписи.Form" id="2365ec6e-aa7c-4076-a59b-c22bd3151d7d.0" configVersion="10b9ab44c15ab8bed50f981f8dc0de605a4764f4"/>
 		<Metadata name="InformationRegister.инт_НастройкиСистемы.ManagerModule" id="501a61a5-4d38-4bce-8d26-4682b21f46eb.2" configVersion="56540f9807cd5e0b5eb32552540d42df721ba2c6"/>

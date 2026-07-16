@@ -39,11 +39,11 @@
 					<v8:content>Настройки системы (Интант)</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment>//s.i.d</Comment>
+			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
 			<EditType>InDialog</EditType>
 			<DefaultRecordForm>InformationRegister.инт_НастройкиСистемы.Form.ФормаЗаписи</DefaultRecordForm>
-			<DefaultListForm/>
+			<DefaultListForm>InformationRegister.инт_НастройкиСистемы.Form.ФормаСписка</DefaultListForm>
 			<AuxiliaryRecordForm/>
 			<AuxiliaryListForm/>
 			<StandardAttributes>
@@ -354,6 +354,7 @@
 					<TypeReductionMode>TransformValues</TypeReductionMode>
 				</Properties>
 			</Dimension>
+			<Form>ФормаСписка</Form>
 			<Form>ФормаЗаписи</Form>
 		</ChildObjects>
 	</InformationRegister>
