@@ -3,7 +3,9 @@
 	<ConfigVersions>
 		<Metadata name="Catalog.инт_РазделНастроек" id="9f143f61-8d35-4e0c-986f-9c5e64bab035" configVersion="4b03af030a38cdb54ac9233f6ef58876baa144c1"/>
 		<Metadata name="Catalog.инт_РазделНастроек.ObjectModule" id="9f143f61-8d35-4e0c-986f-9c5e64bab035.0" configVersion="e725a33421f176060aa4d28849165fb7a536bb86"/>
-		<Metadata name="Configuration.Интант_1" id="835366a0-1be9-46ad-b925-efd750246b41" configVersion="4e464250cd24e7363f016bb29edf54606b698fd0"/>
+		<Metadata name="CommonPicture.инт_КартинкаПодсистемыНастроек" id="ef71776a-7418-4d91-aca5-afe58db676ee" configVersion="ef71776a74184d91aca5afe58db676ee00000000"/>
+		<Metadata name="CommonPicture.инт_КартинкаПодсистемыНастроек.Picture" id="ef71776a-7418-4d91-aca5-afe58db676ee.0" configVersion="ef71776a74184d91aca5afe58db676ee10000000"/>
+		<Metadata name="Configuration.инт_НастройкиСистемы" id="835366a0-1be9-46ad-b925-efd750246b41" configVersion="4e464250cd24e7363f016bb29edf54606b698fd0"/>
 		<Metadata name="DataProcessor.инт_РедакторНастройкиСистемы" id="74ff1446-4e4c-4cb6-9643-a42a8a8018e7" configVersion="11208ced8f95c938effc4e1e4bd3793172169362">
 			<Metadata name="DataProcessor.инт_РедакторНастройкиСистемы.Attribute.инт_РазделНастроек" id="cf383f0a-656c-4a05-9bef-32c7223d4c22"/>
 		</Metadata>

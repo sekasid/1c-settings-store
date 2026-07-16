@@ -52,9 +52,6 @@
 			</SearchControlAddition>
 			<ContextMenu name="СписокКонтекстноеМеню" id="12"/>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="13"/>
-			<Events>
-				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
-			</Events>
 			<ChildItems>
 				<LabelField name="РазделНастроек" id="14">
 					<DataPath>Список.РазделНастроек</DataPath>

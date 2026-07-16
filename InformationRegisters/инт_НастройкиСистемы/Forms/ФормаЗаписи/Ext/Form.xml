@@ -32,9 +32,22 @@
 		</InputField>
 		<InputField name="ЗначениеСтрокаНеограниченная" id="7">
 			<DataPath>Запись.ЗначениеСтрокаНеограниченная</DataPath>
+			<MultiLine>true</MultiLine>
+			<Height>3</Height>
 			<ContextMenu name="ЗначениеСтрокаНеограниченнаяКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ЗначениеСтрокаНеограниченнаяРасширеннаяПодсказка" id="9"/>
 		</InputField>
+		<LabelDecoration name="НадписьХранилищеЗначений" id="12">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранилище значений: нет данных</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьХранилищеЗначенийКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="НадписьХранилищеЗначенийРасширеннаяПодсказка" id="14"/>
+		</LabelDecoration>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Запись" id="1">
