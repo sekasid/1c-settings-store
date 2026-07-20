@@ -1,5 +1,9 @@
 # Настройка системы (sid)
 
+[![Infostart](https://infostart.ru/bitrix/templates/sandbox_empty/assets/tpl/abo/img/logo.svg)](https://infostart.ru/1c/tools/2741448/)
+
+**Публикация на Infostart:** https://infostart.ru/1c/tools/2741448/
+
 Расширение конфигурации 1С:Предприятие для хранения произвольных настроек системы **без изменения основной конфигурации**.
 
 Подходит, когда нужно быстро добавить «ключ — значение» для интеграций, регламентных заданий, обменных сценариев и прочих точек, где править типовую конфигурацию нежелательно или невозможно.
@@ -9,8 +13,7 @@
 **Поставщик:** sid  
 **Версия:** 1.0.0  
 **Режим совместимости:** 8.3.22  
-**Репозиторий:** [github.com/sekasid/1c-settings-store](https://github.com/sekasid/1c-settings-store)  
-**Автор на Infostart:** [профиль](https://infostart.ru/profile/603532/)
+**Репозиторий:** [github.com/sekasid/1c-settings-store](https://github.com/sekasid/1c-settings-store)
 
 ---
 
@@ -172,4 +175,5 @@
 
 ## Контакты
 
-Автор на Infostart: https://infostart.ru/profile/603532/
+**Публикация на Infostart:** https://infostart.ru/1c/tools/2741448/  
+**Автор на Infostart:** https://infostart.ru/profile/603532/
